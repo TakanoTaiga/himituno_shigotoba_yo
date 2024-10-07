@@ -34,7 +34,6 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Build (${{ matrix.arch }})
-        if: github.event_name == 'pull_request'
         uses: docker/bake-action@v3
         with:
           files: |
